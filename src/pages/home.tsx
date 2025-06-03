@@ -11,9 +11,10 @@ export function Home() {
   return (
     <>
       <h1>Mon Blog</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         { posts.map( (post)=> {
           return (
-            <div key={post.id} className="card bg-base-100 w-96 shadow-sm">
+            <div key={post.id} className="card bg-base-100 w-70 shadow-sm">
               <div className="card-body">
                 <h2 className="card-title">{post.title}</h2>
                 <p>{ post.body }</p>
@@ -24,8 +25,9 @@ export function Home() {
             </div>
           )
         } 
-      )
-      }
+        )
+        }
+      </div>
     </>
   )
 }
